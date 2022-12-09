@@ -1,7 +1,7 @@
 "use strict"
 
 import { gerarNumeroAleatorio } from "./funcoes/gerarNumeroAleatorio.js";
-import { reconhecimentoDeVoz } from "./reconhecimentoDeVoz.js";
+import { reconhecimentoDeVoz } from "./funcoes/reconhecimentoDeVoz.js";
 
 export const menorValor = 1;
 export const maiorValor = 1000;
