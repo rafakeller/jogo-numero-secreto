@@ -1,5 +1,7 @@
 "use strict";
 
+import { onSpeak } from "./onSpeak.js";
+
 
 
 export const reconhecimentoDeVoz = () => {
