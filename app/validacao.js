@@ -1,9 +1,18 @@
 function verificaSeValido(chute) {
+  if (chute === "game over" ) {
+    document.body.style.backgroundColor = "var(--game-over-color)";
+    document.body.innerHTML = `<h2> Game Over!</h2>
+  <button id="jogar-novamente" class="btn-jogar">Jogar novamente</button>`;
+  }
   const numero = parseInt(chute);
+  
+  
 
   if (chuteForInvalido(numero)) {
     elementoChute.innerHTML += `<div> Valor inválido</div>`;
   }
+
+  
 
   if (numeroMaiorOuMenor(numero)) {
       elementoChute.innerHTML += `<div> Valor inválido: escolha um número entre ${menorValor} e ${maiorValor}</div>`
@@ -22,6 +31,7 @@ function verificaSeValido(chute) {
     elementoChute.innerHTML += `<div>O número secreto é maior<i class="fa-solid fa-arrow-up-long"></i></div>`
   }
 
+  
 }
 
 function chuteForInvalido(numero) {
@@ -37,3 +47,5 @@ document.body.addEventListener("click", event =>{
     window.location.reload()
    }
 })
+
+
