@@ -1,25 +1,18 @@
-const elementoChute = document.getElementById("chute");
+"use strict";
 
-window.SpeechRecognition = window.SpeechRecongnition || webkitSpeechRecognition;
 
-const recognition = new SpeechRecognition();
-recognition.lang = "pt-Br";
-recognition.start();
 
-recognition.addEventListener("result", onSpeak);
+export const reconhecimentoDeVoz = () => {
+  window.SpeechRecognition =
+    window.SpeechRecongnition || webkitSpeechRecognition;
 
-function onSpeak(event) {
-  const chute = event.results[0][0].transcript;
+  const recognition = new SpeechRecognition();
+  recognition.lang = "pt-Br";
+  recognition.start();
 
-  exibeChuteNaTela(chute);
-  verificaSeValido(chute)
-}
+  recognition.addEventListener("result", (event) => {
+    onSpeak(event);
+  });
 
-function exibeChuteNaTela(chute) {
-  elementoChute.innerHTML = `
-<div>Você disse:</div>
-<span class="box">${chute}</span>
-`;
-}
-
-recognition.addEventListener("end", () => recognition.start())
+  recognition.addEventListener("end", () => recognition.start());
+};

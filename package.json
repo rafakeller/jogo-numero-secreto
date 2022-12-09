@@ -1,0 +1,19 @@
+{
+  "name": "numero_secreto",
+  "version": "1.0.0",
+  "description": "Jogo de adivinhação de números",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafakeller/jogo-numero-secreto.git"
+  },
+  "author": "Rafaela keller",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rafakeller/jogo-numero-secreto/issues"
+  },
+  "homepage": "https://github.com/rafakeller/jogo-numero-secreto#readme"
+}
